@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k8S-eu-ph0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lsM-gw-jmz">
+            <objects>
+                <navigationController id="k8S-eu-ph0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PvP-If-sZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7aI-BD-ECc" kind="relationship" relationship="rootViewController" id="jwE-Ls-tJE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7k-rT-Fxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="730"/>
+        </scene>
+        <!--Sticky Headers-->
+        <scene sceneID="Y7e-HK-0Qc">
+            <objects>
+                <collectionViewController id="7aI-BD-ECc" customClass="CollectionViewController" customModule="CollectionViewStickyHeaders" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cS0-4H-hCp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oec-GL-zaQ" customClass="StickyHeaderFlowLayout" customModule="CollectionViewStickyHeaders" customModuleProvider="target">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="50" height="44"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TESTCELL" id="ajj-1V-Zf7">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TESTHEADER" id="VMB-W0-Dzo" customClass="HeaderView" customModule="CollectionViewStickyHeaders" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mth-th-CGp">
+                                    <rect key="frame" x="0.0" y="-1" width="600" height="45"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5fV-HP-rym">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kY-Bm-jk3">
+                                                <rect key="frame" x="8" y="12" width="584" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-wZ-iKc">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3VH-eK-R0f">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abh-yp-6Ww" userLabel="Top line">
+                                                            <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="NnL-pc-mbd"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNx-Ds-TUD" userLabel="Bottom line">
+                                                            <rect key="frame" x="0.0" y="44" width="600" height="1"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="IeV-10-azY"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="sNx-Ds-TUD" secondAttribute="bottom" id="DqS-hC-MnS"/>
+                                                        <constraint firstItem="abh-yp-6Ww" firstAttribute="leading" secondItem="3VH-eK-R0f" secondAttribute="leading" id="O1t-Vd-jn3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="abh-yp-6Ww" secondAttribute="trailing" id="Omn-9N-caW"/>
+                                                        <constraint firstItem="abh-yp-6Ww" firstAttribute="top" secondItem="3VH-eK-R0f" secondAttribute="top" id="dGL-ZW-b8a"/>
+                                                        <constraint firstItem="sNx-Ds-TUD" firstAttribute="leading" secondItem="3VH-eK-R0f" secondAttribute="leading" id="o45-NV-N2P"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sNx-Ds-TUD" secondAttribute="trailing" id="qFF-cj-hR2"/>
+                                                    </constraints>
+                                                </view>
+                                                <vibrancyEffect>
+                                                    <blurEffect style="light"/>
+                                                </vibrancyEffect>
+                                            </visualEffectView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="blQ-wZ-iKc" secondAttribute="trailing" id="2SF-Mi-Ai4"/>
+                                            <constraint firstItem="blQ-wZ-iKc" firstAttribute="leading" secondItem="5fV-HP-rym" secondAttribute="leading" id="JKH-nA-N5Z"/>
+                                            <constraint firstAttribute="bottom" secondItem="blQ-wZ-iKc" secondAttribute="bottom" id="LVh-bm-Azd"/>
+                                            <constraint firstItem="blQ-wZ-iKc" firstAttribute="top" secondItem="5fV-HP-rym" secondAttribute="top" id="zHx-tI-xOI"/>
+                                        </constraints>
+                                    </view>
+                                    <blurEffect style="extraLight"/>
+                                </visualEffectView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="mth-th-CGp" secondAttribute="bottom" id="BHw-AL-Waq"/>
+                                <constraint firstItem="mth-th-CGp" firstAttribute="leading" secondItem="VMB-W0-Dzo" secondAttribute="leading" id="JYk-9c-ZEQ"/>
+                                <constraint firstItem="mth-th-CGp" firstAttribute="top" secondItem="VMB-W0-Dzo" secondAttribute="top" constant="-1" id="PCe-6N-njR"/>
+                                <constraint firstAttribute="trailing" secondItem="mth-th-CGp" secondAttribute="trailing" id="bxS-g9-6dF"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="6kY-Bm-jk3" id="bCo-ks-IRB"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="7aI-BD-ECc" id="WRt-99-tZe"/>
+                            <outlet property="delegate" destination="7aI-BD-ECc" id="lnw-KJ-eCJ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Sticky Headers" id="NC5-k9-7kC"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4m-hd-85A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="730"/>
+        </scene>
+    </scenes>
+</document>
