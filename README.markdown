@@ -1,0 +1,1 @@
+This is the sample project to accompany the blog post '[Collection view sticky headers](http://dativestudios.com/blog/2015/01/10/collection_view_sticky_headers/)'.
